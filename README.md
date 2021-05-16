@@ -8,6 +8,8 @@
 **Summerfall Interactive**
 *This repo is now empty, but soon we have some projects to push it*
 
+**This repo is used by community releases - so not search the meaning of life.**
+
 - ▶️ ***Official site: https://sfi.mmnetwork.net***
 - ▶️ ***Official Project GIT User: @summerfallinteractive***
 - ▶️ ***Official Discord: (Soon)***
