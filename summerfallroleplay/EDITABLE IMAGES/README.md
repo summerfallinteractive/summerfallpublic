@@ -8,4 +8,4 @@
 
 > How to use this files?
 >
->> Download a selected .psd file, and open it in **Adobe Photoshop** program, and then edit the file.
+>> Download a selected .psd file, and open it in **Adobe Photoshop** program, and then edit the file. If you done, just save to **selectedname.png**
