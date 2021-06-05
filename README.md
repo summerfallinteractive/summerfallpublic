@@ -6,7 +6,7 @@
 - 📫 How to reach us? Take a look this mail: summerfallinteractive@gmail.com
 
 **Summerfall Interactive**
-*This repo is now empty, but soon we have some projects to push it*
+*This is our public repository. This containing the main community developer releases for our projects - keep this area clear.*
 
 **This repo is used by community releases - so not search the meaning of life.**
 
