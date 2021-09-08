@@ -14,7 +14,7 @@ AddEventHandler("sfi_simplenotify.returnIsAllowed", function(isAllowed)
 end)
 
 -- Commands with permissions
-RegisterCommand('chat', function(source, args, rawCommand)
+RegisterCommand('adi', function(source, args, rawCommand)
 if allowedToUse then
     theme = args[1]
     message = ""
@@ -35,7 +35,7 @@ if allowedToUse then
     end
 else -- If the player not have ace permission, send a warning message
     exports.bulletin:Send({
-        message = "Te ezt a funkciót nem használhatod!",
+        message = Config.ErrorMessage,
         timeout = 5000,
         theme = 'warning',
         exitAnim = 'fadeOut'
@@ -54,8 +54,8 @@ RegisterCommand('addp', function(source, args)
         end--]]
         exports.bulletin:SendAdvanced({
             message = table.concat(args, " "),
-            title = "SEGÉLYHÍVÓ KÖZPONT",
-            subject = "Értesítés",
+            title = Config.AddpTitle,
+            subject = Config.SubjectName,
             timeout = 5000,
             theme = 'info',
             type = 'advanced',
@@ -64,7 +64,7 @@ RegisterCommand('addp', function(source, args)
             })
     else
 
-        exports.bulletin:SendError("Te ezt a funkciót nem használhatod!", 5000)
+        exports.bulletin:SendError(Config.ErrorMessage, 5000)
     end
 end, false)
 
@@ -77,8 +77,8 @@ RegisterCommand('addppin', function(source, args)
         end--]]
         local id = exports.bulletin:SendPinned({
             message = table.concat(args, " "),
-            title = "SEGÉLYHÍVÓ KÖZPONT",
-            subject = "Értesítés",
+            title = Config.AddpTitle,
+            subject = Config.PinSubjectName,
             timeout = 5000,
             theme = 'info',
             type = 'advanced',
@@ -92,7 +92,7 @@ RegisterCommand('addppin', function(source, args)
         end    
     else
 
-        exports.bulletin:SendError("Te ezt a funkciót nem használhatod!", 5000)
+        exports.bulletin:SendError(Config.ErrorMessage, 5000)
     end
 end, false)
 
@@ -106,14 +106,14 @@ RegisterCommand('adtx', function(source, args)
     if allowedToUse then
         exports.bulletin:SendAdvanced({
             message = table.concat(args, " "),
-            title = "TAXI SZOLGÁLAT",
-            subject = "Értesítés",
+            title = Config.AdtxTitle,
+            subject = Config.SubjectName,
             timeout = 5000,
             theme = 'default',
             icon = 'CHAR_TAXI'
         })
     else
-        exports.bulletin:SendError("Te ezt a funkciót nem használhatod!", 5000)
+        exports.bulletin:SendError(Config.ErrorMessage, 5000)
     end   
 end, false)
 
@@ -126,8 +126,8 @@ RegisterCommand('adtxpin', function(source, args)
         end--]]
         local id = exports.bulletin:SendPinned({
             message = table.concat(args, " "),
-            title = "TAXI SZOLGÁLAT",
-            subject = "Értesítés",
+            title = Config.AdtxTitle,
+            subject = Config.PinSubjectName,
             timeout = 5000,
             theme = 'default',
             type = 'advanced',
@@ -141,7 +141,7 @@ RegisterCommand('adtxpin', function(source, args)
         end    
     else
 
-        exports.bulletin:SendError("Te ezt a funkciót nem használhatod!", 5000)
+        exports.bulletin:SendError(Config.ErrorMessage, 5000)
     end
 end, false)
 
@@ -159,8 +159,8 @@ end, false)
     if allowedToUse then
         exports.bulletin:SendAdvanced({
             message = table.concat(args, " "),
-            title = "EXAMPLE JOB",
-            subject = "Notification",
+            title = Config.ExampleTitle,
+            subject = Config.SubjectName,
             timeout = 5000,
             theme = 'info',
             icon = 'CHAR_CALL911',
@@ -168,7 +168,7 @@ end, false)
             })
     else
 
-        exports.bulletin:SendError("ERROR MESSAGE HERE", 5000)
+        exports.bulletin:SendError(Config.ErrorMessage, 5000)
     end
 end, false)
 
@@ -176,8 +176,8 @@ RegisterCommand('examplepin', function(source, args)
     if allowedToUse then
         local id = exports.bulletin:SendPinned({
             message = table.concat(args, " "),
-            title = "EXAMPLE JOB",
-            subject = "Pinned Notification",
+            title = Config.ExampleTitle,
+            subject = Config.PinSubjectName,
             timeout = 5000,
             theme = 'info',
             type = 'advanced',
@@ -191,7 +191,7 @@ RegisterCommand('examplepin', function(source, args)
         end    
     else
 
-        exports.bulletin:SendError("ERROR MESSAGE HERE", 5000)
+        exports.bulletin:SendError(Config.ErrorMessage, 5000)
     end
 end, false)
 
@@ -199,7 +199,7 @@ RegisterCommand("removeEXAMPLEpin", function(source, args)
     if pinnedMessages.EXAMPLEID ~= nil then
         exports.bulletin:Unpin(pinnedMessages.EXAMPLEID)
     end    
-end, false)--]]
+end, false)]]
 
 
 -- This is a test command to see the table.concat function is working or not.
@@ -207,4 +207,4 @@ end, false)--]]
 
 --[[RegisterCommand('sendtest-success', function(source, args)
     exports.bulletin:SendSuccess(table.concat(args, " "), 5000)
-end, false)--]]
+end, false)]]
