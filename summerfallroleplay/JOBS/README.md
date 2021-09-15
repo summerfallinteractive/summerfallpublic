@@ -18,10 +18,10 @@
 | Jobs        | Job available       |
 | ----------- | ------------------- |
 | Police      | :heavy_check_mark:  |
-| Fire        | :heavy_check_mark:  |
+| Fire        | :x:                 |
 | EMS         | :heavy_check_mark:  |
 | SABP        | :x:                 |
-| LSL         | :x:                 |
-| FIB         | :x:                 |
+| LSL         | :heavy_check_mark:  |
+| FIB         | :heavy_check_mark:  |
 | Park Ranger | :heavy_check_mark:  |
 | Army        | :x:                 |
