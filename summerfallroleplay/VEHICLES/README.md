@@ -21,7 +21,7 @@
 | Fire        | :x:                 |
 | EMS         | :heavy_check_mark:  |
 | SABP        | :heavy_check_mark:  |
-| LSL         | :x:                 |
+| LSL         | :heavy_check_mark:  |
 | FIB         | :heavy_check_mark:  |
 | Park Ranger | :heavy_check_mark:  |
 | Army        | :x:                 |
